@@ -1,0 +1,999 @@
+            /* các thuộc tính chung */
+/* 
+* {
+    color: rgb(28, 24, 24);
+} */
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    
+    box-sizing: border-box;
+    
+
+}
+
+button{
+    background-color: #ebca94;
+    cursor: pointer;
+    outline: none;
+}
+.outline {
+        position: relative;
+        z-index: 3;
+        background: transparent;
+        color: #1172c4;
+        font-size: 14px;
+        border-color: #1172c4;
+        border-style: solid;
+        border-width: 2px;
+        border-radius: 22px;
+        padding: 10px 40px;
+        text-transform: uppercase;
+        transition: all 0.2s linear;
+       
+    }
+    .outline:hover {
+        color: white;
+        background: #1172c4;
+        border-color: white;
+        transition: all 0.2s linear;
+    }
+    .outline:active {
+        border-radius: 22px;
+    }
+a{
+    text-decoration: none;
+}
+
+h1{
+    color: var(--tillte_color);
+}
+
+body{
+    margin: 0;
+    width: 100%;
+     
+    
+     
+     background-color: #ffb457;
+
+}
+
+             /* các thuộc tính chi tiết */
+
+             /* phần đầu */
+
+#header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 10;
+}
+            /* phần menu điều hướng tìm kiếm, đăng nhập, đăng ký */
+
+.menu_top{  
+    background-color: rgb(23, 23, 30);
+    
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+           
+
+.home{
+    width: 70%;
+    height: 100%;
+    float: left; 
+}
+.home a{
+    color: gold;
+    font-size: 4em;
+    line-height: 90px;
+    margin: 0 45%;
+    border-radius: 2px;
+    font-family: cursive;
+    text-shadow: 0 2px 5px rgba(110, 9, 9, 0.7);
+}
+
+.search_bar{
+   
+    width: 100%;
+    float: left;
+}
+input#search{
+  
+    width: 85%;
+ 
+    margin: 150px 0 0 0 ;
+    border-radius: 3px;
+}
+.icon_search{
+    color: white;
+}
+
+.account{
+    text-align: right;
+    color: rgb(102, 34, 34);
+}
+.account a{
+    color: white;
+}
+.account a:hover{
+    text-decoration: underline;
+}
+
+                /* phần thân */
+
+#container{
+    position: relative;
+    width: 100%;
+    min-height: 800px ;
+   right: 0;
+margin: 100px 0 0 0 ;
+
+}
+ .product .img_product{
+     width: 90%;
+     height: 80%;
+ }
+.product{
+    width: 31.3%;
+    height: 500px;
+    padding: 1%;
+    margin: 1%;
+    border-radius: 5px;
+    box-sizing: border-box;
+    float: left;
+}
+.img_product{
+    width: 40%;
+    
+    padding: 2% 0;
+    float: left;
+    margin: 0;
+}
+.description h1,p{
+    color: #000;
+}
+.description{
+    width: 55%;
+    overflow: auto;
+    height: 400px;
+    padding: 1%;
+    margin: 0;
+    float: left;
+}
+.size-product{
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    right: 30%;
+    top: 600px;
+    padding: 2px;
+    margin: 2px;
+    display: flex;
+    flex-direction: row;
+
+}
+.size{
+    cursor: pointer;
+    background-color: gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border: 2px solid brown;
+    width: 25%;
+    height: 100%;
+}
+.click-size{
+    opacity: 0.8;
+}
+
+.box_product{
+    width: 80%;
+    min-height: 800px;
+    margin: 100px 0 0 20%;
+}
+.product:hover{
+    background-color: #ffb357e4 ;
+}
+.product img:hover{
+    transform: scale(1.02);
+    transition: 0.2s;
+    opacity: 1.1;
+}
+.product h2:hover{
+    text-decoration: underline;
+}
+.product h2,p{
+    color: #000;
+}
+.box_1{
+    background-color: #1d1d27;
+    
+    overflow: hidden ;
+    width: 20%;
+    height: 650px;
+    padding: 2%;
+    position: fixed;
+    box-sizing: border-box;
+}
+.box_2{
+    width: 100%;
+    margin-top: 280px;
+    overflow: hidden;
+
+}
+.box_3{
+    display: flexbox;
+    position: absolute;
+    width: 75%;
+    margin: 0 0 0 23%;
+    padding: 2%;
+    box-sizing: border-box;
+    
+}
+img{
+    border-radius: 15px;
+}
+.category{
+   
+    width: 100%;
+    border-radius: 5px;
+    margin: 5px;
+    text-align: center;
+}
+.category:hover{
+    background-color: rgb(40, 40, 40);
+}
+.category a{
+    line-height: 30px; 
+    color: wheat !important;
+}
+
+
+                /* phần chân */
+#footer{
+  
+    width: 100%;
+
+}
+#footer p{
+    text-align: center;
+    line-height: 60px;
+    color: whitesmoke;
+}
+
+/* tràn cá nhân   */
+
+
+.profile_icon,.icon_shop{
+    font-size: 40px!important;
+    color: rgba(255, 247, 0, 0.537);
+}
+
+
+.profile p{
+    font-family: cursive;
+    font-size: 2em;
+    text-align: center;
+    margin: 0;
+    padding: 5px;
+    color: rgb(253, 114, 8);
+}
+.profile{
+    border: 2px solid var(--border_color);
+    width: 100%;
+    height: 400px;
+    margin: 150px 0 0 0;
+    border-radius: 10px;
+    color: white!important;
+    position: relative;
+}
+.table_profile{
+    margin: 0 5%;
+}
+.update_profile{
+   
+    width: 100px;
+    height: 20px;
+    padding: 2px;
+    position: absolute;
+    right: 3%;
+    top: -18%;
+    font-size: x-large;
+}
+.update_profile a{
+    color: red;
+    text-shadow: 1px 2px 4px rgb(0, 0, 0, 0.7);
+    text-decoration: underline;
+}
+.update_profile a:hover{
+    color: rgb(255, 20, 0);
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.467);
+   
+}
+
+.bill_history h1{
+    line-height: 60px;
+    color: rgb(7, 37, 112);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3em;
+    text-shadow: 1px 2px rgb(0, 0, 0, 0.4);
+}
+.bill_history{
+    width: 70%;
+    min-height: 500px;
+    margin: 100px 0 0 25%;
+    text-align: center;
+    padding: 2%
+}
+.bill_summary table{
+    text-align: center;
+    line-height: 45px;
+}
+.bill_waitting p{
+    font-size: 2em;
+    color: purple;
+}
+.bill_waitting{
+    width: 95%;
+    min-height: 150px;
+}
+
+.bill_waitting .bill_detail,.bill_detail-ship,.bill_detail-ok,.bill_detail-ko{
+    background-color: #ffffff;
+    width: 95%;
+    height: auto;
+    border-radius: 8px;
+    text-align: left;
+    padding: 2px;
+    display: none;
+    animation: open_detail ease 1s;
+    opacity: 1;
+}
+@keyframes open_detail{
+    from{
+        opacity: 0;
+        transform: translateY(-50px) scale(0);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+.review-rating{
+    background-color: #ffffff;
+    width: 99%;
+    min-height: 100px;
+    margin: 2px;
+    border: 2px solid rgba(255, 221, 0, 0.664);
+    border-radius: 5px;
+    opacity: 0.8;
+    z-index: 2;
+}
+.bill_waitting .bill_summary {
+    background-color: #ffffff;
+    width: 95%;
+    height: 50px;
+    margin: 2px;
+    border: 2px solid rgba(255, 221, 0, 0.664);
+    border-radius: 5px;
+    opacity: 0.8;
+    z-index: 2;
+}
+.btn_detail_open,.btn_detail-ship_open,.btn_detail-ok_open,.btn_detail-ko_open{
+    min-width: 100px;
+    border-radius: 5px;
+    display: inline-block;
+}
+.btn_detail_close,.btn_detail-ship_close,.btn_detail-ok_close,.btn_detail-ko_close{
+    min-width: 100px;
+    border-radius: 5px;
+    display: none;
+}
+
+
+.move{
+    display: none;
+}
+
+/*  đăng nhập đăng ký */
+.sign_in,.sign_up,.update,.order,.rating{
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    margin: 0;
+    z-index: 101;
+    display: none;
+    
+}
+.btn_close{
+  right: 0;
+    color: red;
+}
+.open{
+    display: inline-block !important;
+}
+@keyframes open{
+    from{
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.form_update_profile,.form_sign_up,.form_sign_in,.form_order{
+    border: 1px solid var(--border_color);
+   
+    width: 40%;
+    overflow: hidden;
+    margin: 150px 30%;
+    border-radius: 15px;   
+    box-shadow: 4px 6px 0 rgba(10,20,30,0.8);
+    animation: open ease 1.5s;
+    color: #0cfaa7;
+    
+    
+}
+form {
+    text-align: center;
+    background-color: rgb(20,20,20);
+    color: rgb(224, 207, 207);
+    margin:0;
+}
+form a{
+    color: brown;
+    font-size: 1.3em;
+}
+form p{
+      color: brown;
+    font-size: 2em;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif   ;
+    margin-top: 0;
+}
+table{
+    width: 100%;
+    margin: 0 ;
+}
+input{
+ 
+    width: 70%;
+    border-radius: 5px;
+    height: 25px;
+}
+button{
+    color: #000;
+}
+/* phần bóng logo */
+
+#sumo{
+    position:fixed;
+    justify-content: center;
+   margin: 0;
+   top: -1%;
+    left: 2%;
+  cursor: cell;
+  margin: 20px;
+  perspective: 1200px;
+  perspective-origin: 50% 50%;
+    align-items: centers;
+    z-index: 2000;
+
+}
+.ball{
+    position: relative;
+    
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin: 0;
+    background: radial-gradient(circle at 50% 120%, #faea0c, #e8ff15 10%, #d4df07a5 80%, #e0d7548d 100%);
+    box-shadow: 10px 15px 15px rgba(30, 13, 13, 0.211);
+    bottom: 0px;
+}
+.ball:hover{
+    animation-name: change_color;
+    animation-duration: 8s;
+  animation-delay: -2s;
+  animation-iteration-count: infinite;
+}
+.ball:active{
+    height: 180px;
+    width: 180px;
+}
+@keyframes change_color{
+    0%{ background: radial-gradient(circle at 50% 120%, #faea0c, #e8ff15 10%, #d4df07a5 80%, #e0d7548d 100%);}
+    10%{ background: radial-gradient(circle at 50% 120%, #fa630c, #ffc115 10%, #df5a07a5 80%, #ff5b458d 100%);}
+    20%{ background: radial-gradient(circle at 50% 120%, #fa200c, #ff4c15 10%, #df8907a5 80%, #e085548d 100%);}
+    30%{ background: radial-gradient(circle at 50% 120%, #dafa0c, #ffef15 10%, #d4df07a5 80%, #e0d7548d 100%);}
+    40%{ background: radial-gradient(circle at 50% 120%, #83fa0c, #6bff15 10%, #07df24a5 80%, #5be0548d 100%);}
+    50%{ background: radial-gradient(circle at 50% 120%, #0cfaa7, #15ffc8 10%, #07df93a5 80%, #54e0e07a 100%);}
+    60%{ background: radial-gradient(circle at 50% 120%, #0c77fa, #155bff 10%, #0e07dfa5 80%, #547ce08d 100%);}
+    70%{ background: radial-gradient(circle at 50% 120%, #630cfa, #8e15ff 10%, #df07dca5 80%, #a654e08d 100%);}
+    80%{ background: radial-gradient(circle at 50% 120%, #ea0cfa, #ff15d4 10%, #df07d8a5 80%, #e054d08d 100%);}
+    90%{ background: radial-gradient(circle at 50% 120%, #fa630c, #ffc115 10%, #d4df07a5 80%, #e09a548d 100%);}
+    100%{ background: radial-gradient(circle at 50% 120%, #faea0c, #e8ff15 10%, #d4df07a5 80%, #e0d7548d 100%);}
+}
+
+.ball .shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0) 50%);
+    transform: rotateX(90deg) translateZ(-150px);
+    z-index: -1;
+    text-align: center;
+  }
+  .ball:before{
+    content: "";
+    position: absolute;
+    top: 1%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    background: radial-gradient(circle at 50% 0px, #ddf180, rgba(255, 255, 255, 0) 58%);
+    filter: blur(5px);
+    z-index: 2;
+  }
+  .ball:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    border-radius: 50%;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 14%, rgba(255, 255, 255, 0) 24%);
+    transform: translateX(-80px) translateY(-90px) skewX(-20deg);
+    filter: blur(10px);
+  }
+  .hat{
+    width: 40%;
+    height: 40%;
+    margin: 10%;
+   
+    position: absolute;
+    transform: rotateX(60deg) translateX(35px) translateY(-30px) translateZ(50px);
+   border-radius: 50%;
+   box-shadow: 0px 1px 1px 1px rgba(212, 213, 221, 0.6),
+   0px 2px 2px 2px rgba(110, 81, 81, 0.6),
+   
+   0 6px 1px rgba(193, 188, 188, 0.1),
+   0 0 5px rgba(231, 221, 221, 0.1),
+   0 1px 3px rgba(243, 243, 243, 0.3),
+   0 5px 5px 5px rgba(252, 244, 244, 0.2),
+   0 10px 10px 10px rgba(245, 239, 239, 0.25),
+   0 15px 15px 15px rgba(247, 243, 243, 0.2);
+   
+   z-index: 2;
+  }
+  .eye_left{
+      width: 30%;
+      height: 30%;
+      margin: 10%;
+      background:rgba(0, 0, 0, 0.918);
+      position: absolute;
+      transform: translateX(20px) translateY(30px) skewX(-25deg) skewY(30deg);
+     border-radius: 50%;
+     box-shadow: rgba(0, 0, 0, 0.1);
+     animation-name: eye_left;
+    animation-duration: 6s;
+  animation-delay: -2s;
+  animation-iteration-count: infinite;
+     
+  }
+  @keyframes eye_left{
+      0%{transform: translateX(20px) translateY(30px) skewX(-25deg) skewY(30deg);}
+      40%,60%{transform: translateX(40px) translateY(30px) skewX(-20deg) skewY(30deg);}
+      100%{transform: translateX(20px) translateY(30px) skewX(-25deg) skewY(30deg);}
+  }
+  .eye_right{
+    width: 30%;
+    height: 30%;
+    margin: 10%;
+    background:rgba(0, 0, 0, 0.918);
+    position: absolute;
+    transform: translateX(90px) translateY(30px) skewX(-25deg) skewY(30deg);
+   border-radius: 50%;
+   box-shadow: rgba(0, 0, 0, 0.1);
+   animation-name: eye_right;
+   animation-duration: 6s;
+ animation-delay: -2s;
+ animation-iteration-count: infinite;
+  }
+  @keyframes eye_right{
+      0%{   transform: translateX(90px) translateY(30px) skewX(-25deg) skewY(30deg);}
+      40%,60%{   transform: translateX(110px) translateY(30px) skewX(-20deg) skewY(35deg);width: 27%;height: 27%;}
+      100%{   transform: translateX(90px) translateY(30px) skewX(-25deg) skewY(30deg);}
+  }
+  .mouth{
+      width: 20%;
+      height: 20%;
+      margin: 10%;
+    
+      position: absolute;
+      transform: translateX(60px) translateY(90px) skewX(-25deg) skewY(30deg);
+      border-radius: 50%;
+      border-bottom:3px solid black ;
+      animation-name: mouth;
+      animation-duration: 6s;
+    animation-delay: -2s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes mouth{
+      0%{ transform: translateX(60px) translateY(90px) skewX(-25deg) skewY(30deg);}
+      40%,60%{ transform: translateX(50px) translateY(110px) skewX(-25deg) skewY(30deg);}
+      100%{ transform: translateX(60px) translateY(90px) skewX(-25deg) skewY(30deg);}
+  }
+
+/*  */
+
+  /* giỏ hàng */
+
+  .list_cart{
+      width: 95%;
+      margin: 2%;
+      padding: 1%;
+      text-align: center;
+      border: 1px solid brown;
+      box-shadow: -3px 5px rgba(0, 0, 0, 0.4),3px 5px rgba(0, 0, 0, 0.8);
+  }
+
+  .page a{
+      font-size: 1.2em;
+  }
+  .page{
+      bottom: 0;
+      position: absolute;
+      width: 100%;
+      height: 20px;
+      text-align: center;
+  }
+  .num_in_cart p,.um_in_cart p{
+      line-height: 15px;
+      color: white;
+  }
+  .num_in_cart{
+      background-color: rgb(29, 111, 127);
+      width: 300px;
+      height: 50px;
+      position: fixed;
+      left: 0;
+      bottom: 50%;
+      z-index: 2;
+      font-size: 1.2em;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 2px 4px rgb(23, 23, 30);
+  }
+  .box-drop-money{
+      background-color: rgb(29, 111, 127);
+      width: 300px;
+      height: 50px;
+      color: gold;
+      line-height: 50px;
+      position: fixed;
+      left: 0;
+      bottom: 10%;
+      z-index: 2;
+      font-size: 1.2em;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 2px 4px rgb(23, 23, 30);
+  }
+  .um_in_cart{
+      
+      background-color: rgb(29, 111, 127);
+      width: 300px;
+      height: 50px;
+      position: fixed;
+      left: 0;
+      bottom: 40%;
+      z-index: 2;
+      font-size: 1.2em;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 2px 4px rgb(23, 23, 30);
+  }
+  .null{
+    background-color: rgb(136, 126, 11);
+    width: 400px;
+    height: 150px;
+    position: fixed;
+    left: 40%;
+    bottom: 50%;
+    z-index: 2;
+    font-size: 1.2em;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 2px 4px rgb(23, 23, 30);
+  }
+  .null p{
+      line-height: 20px;
+      font-size: 1.em;
+      color: white;
+  }
+
+  /* đặt hàng */
+
+
+
+  .btn_order {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 30px;
+    margin-top: 20px;
+}
+
+.btn_order:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.btn_order:active {
+    color: #000
+}
+
+
+.btn_order:hover:before {
+    opacity: 1;
+}
+
+.btn_order:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+
+
+/* THông báo đẩy */
+
+.noti{
+    line-height: 30px;
+    color: red;
+    font-family: cursive;
+}
+.notify,.notify-z{
+    background-color: #fff;
+    width: 250px;
+    min-height: 120px;
+    position: fixed;
+    top: 10px;
+    left: 18%;
+    border-radius: 10px;
+    animation: notify ease 0.5s, out linear 1s 8s forwards;
+    z-index: 100000;
+    display: none;
+    text-align: center;
+}
+@keyframes notify{
+    from{
+        opacity: 0;
+        transform: translateX(-200px) scale(0);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+@keyframes out{
+    to{
+        opacity: 0;
+    }
+}
+
+.under{
+    width: 80%;
+    min-height: 200px;
+    position: absolute;
+    right: 0;
+    top: 800px;
+    background-color: #333;
+    display: flexbox;
+
+   
+}
+.btn-rating{
+    align-items: center;
+}
+
+.review{
+    
+    width: 30%;
+    min-height: 200px;
+    position: absolute;
+    right: 15%;
+    top: 550px;
+    background-color: #333;
+    border-radius: 10px ;
+}
+
+
+
+.form_rating .star {
+    width: 300px;
+    height: 50px;
+    align-items: center;
+ }
+.form_rating {
+    width: 60%;
+    min-height: 220px;
+    position: relative;
+    margin-top: 400px;
+    background-color: #fff;
+    border: none;
+    font-size: 14px;
+    border-radius: 15px;
+    left: 60%;
+    transform: translateX(-50%);
+    animation: open_rating ease 1s;
+  }
+  
+@keyframes open_rating{
+    from{
+        opacity: 0;
+        transform: translate(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translate(-380px);
+    }
+}
+  
+  .form_rating input {
+    border: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    opacity: 0;
+  }
+  
+  .form_rating label {
+    position: relative;
+    float: right;
+    color: #C8C8C8;
+  }
+  
+  .form_rating label:before {
+    margin: 5px;
+    content: "\f005";
+    font-family: FontAwesome;
+    display: inline-block;
+    font-size: 1.5em;
+    color: #ccc;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .form_rating input:checked ~ label:before {
+    color: #FFC107;
+  }
+  
+  .form_rating label:hover ~ label:before {
+    color: #ffdb70;
+  }
+  
+  .form_rating label:hover:before {
+    color: #FFC107;
+  }
+
+  .name-rating{
+font-size: 1.5em;
+line-height: 50px;
+  }
+  .time-rating{
+     font-size: 0.8em;
+     float: right;
+  }
+
+
+
+  .highcharts-figure,
+.highcharts-data-table table {
+  min-width: 310px;
+  max-width: 800px;
+  margin: 1em auto;
+}
+
+#containerr,#container-2,#container-3 {
+  height: 500px;
+}
+
+.highcharts-data-table table {
+  font-family: Verdana, sans-serif;
+  border-collapse: collapse;
+  border: 1px solid #ebebeb;
+  margin: 10px auto;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.highcharts-data-table caption {
+  padding: 1em 0;
+  font-size: 1.2em;
+  color: #555;
+}
+
+.highcharts-data-table th {
+  font-weight: 600;
+  padding: 0.5em;
+}
+
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+  padding: 0.5em;
+}
+
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+  background: #f8f8f8;
+}
+
+.highcharts-data-table tr:hover {
+  background: #f1f7ff;
+}
+
+
+
+
+
+
+
+  .highcharts-figure-2,
+  .highcharts-data-table table {
+    min-width: 310px;
+    max-width: 800px;
+    margin: 1em auto;
+  }
+  
+  
