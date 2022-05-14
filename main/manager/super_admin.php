@@ -12,39 +12,49 @@
     <!-- phần bài đăng -->
    
     <?php include('container.php') ?>
-    <p id="aaa"></p>
+        <div class="box_2">
+            <div class="category">
+                <a href="?">Doanh số</a>
+            </div>
+            <div class="category">
+                <a href="?statistical=1">Admin</a>
+            </div>
+            <div class="category">
+                <a href="?statistical=2">Customers</a>
+            </div>
+            <div class="category">
+                <a href="?statistical=3">Products</a>
+            </div>
+            <div class="category">
+                <a href="?statistical=4">Manufacturers</a>
+            </div>
+
+         </div>
     </div>
-   
+
     <div class="bill_history">
-      
+      <?php if (empty($_GET['statistical'])){
+          include('turnover.php');
+      } ?>
+        <?php if (isset($_GET['statistical'])){ ?>
 
-            <figure class="highcharts-figure"> </figure>
-            <div id="containerr"></div>
-           
+            <?php if ($_GET['statistical'] == 1){ ?>
 
-  </figure>
-  <script src="https://code.highcharts.com/highcharts.js"></script>
-  <script src="https://code.highcharts.com/modules/exporting.js"></script>
-  <script src="https://code.highcharts.com/modules/export-data.js"></script>
-  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-  <script src="../../asset/javascript/week.js"></script>
-       
-<figure class="highcharts-figure-3"></figure>
-  <div id="container-3"></div>
- 
-</figure>
-       <script src="../../asset/javascript/month.js"></script>
+            <?php } ?>
 
+            <?php if ($_GET['statistical'] == 2){ ?>
 
-<script src="https://code.highcharts.com/modules/data.js"></script>
-<script src="https://code.highcharts.com/modules/drilldown.js"></script>
+            <?php } ?>
 
-        <figure class="highcharts-figure-2"></figure>
-            <div id="container-2"></div>
+            <?php if ($_GET['statistical'] == 3){ ?>
 
-            </figure>
+            <?php } ?>
             
-            <?php include('pie.php') ?>
+            <?php if ($_GET['statistical'] == 4 ){ ?>
+
+            <?php } ?>
+
+        <?php } ?>
     </div>
 </body>
 </html>
