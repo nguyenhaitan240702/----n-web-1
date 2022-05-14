@@ -120,6 +120,7 @@
         </a>
     <?php }else{ ?>
         <?php if($page > 2){ ?>
+
     <a href="?page=1&search=<?php echo $search ?>">
     <?php echo 1 ?>
         </a>
@@ -130,8 +131,8 @@
     <a href="?page=<?php echo $i ?>&search=<?php echo $search ?>">
     <?php echo $i ?>
         </a>
-      
-      
+
+
         <?php } ?>
 
     <?php } ?>
