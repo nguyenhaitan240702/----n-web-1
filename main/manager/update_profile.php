@@ -10,9 +10,9 @@ $password = $_POST['password'];
 
 require '../../connect.php';
 
-$sql = " update customer
+$sql = " update admin
         set 
-         name = '$name',
+        name = '$name',
         birthday = '$birthday',
         gender = '$gender',
         number_phone = '$num',
@@ -22,4 +22,4 @@ $sql = " update customer
         ";
 $result = mysqli_query($connect,$sql);
 
-header('location:main/customer/profile.php');
+header('location:admin.php?profile');

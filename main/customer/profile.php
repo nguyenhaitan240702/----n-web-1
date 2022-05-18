@@ -93,6 +93,11 @@
       <table>
               <p>>Bạn muốn thay đổi hồ sơ của mình à?<</p>
           <tr>
+              <td>
+                  <input type="hidden" value="<?php echo $id ?>" name="id" >
+              </td>
+          </tr>
+          <tr>
               <td style="width: 30%; height:50px" >
                   Tên của bạn
               </td>
@@ -195,7 +200,7 @@
                         
                         <tr>
                            
-                            <td style="width:10%;">Đơn: <?php echo $each['id'] ?></td> 
+                            <td style="width:10%;"></td>
                             <td style="width: 20%;"><?php 
                             $date=date_create($each['time']);
                             echo date_format($date,"H:i:s  d-m-Y ")
@@ -282,7 +287,7 @@
                                         
                                         <tr>
                                         
-                                            <td style="width:10%;">Đơn: <?php echo $each['id'] ?></td> 
+                                            <td style="width:10%;"></td>
                                             <td style="width: 20%;"><?php 
                                             $date=date_create($each['time']);
                                             echo date_format($date,"H:i:s  d-m-Y ")
@@ -368,7 +373,7 @@
                                         
                                         <tr>
                                         
-                                            <td style="width:10%;">Đơn: <?php echo $each['id'] ?></td> 
+                                            <td style="width:10%;"></td>
                                             <td style="width: 20%;"><?php 
                                             $date=date_create($each['time']);
                                             echo date_format($date,"H:i:s  d-m-Y ")
@@ -456,7 +461,7 @@
                                         
                                         <tr>
                                         
-                                            <td style="width:10%;">Đơn: <?php echo $each['id'] ?></td> 
+                                            <td style="width:10%;"></td>
                                             <td style="width: 20%;"><?php 
                                             $date=date_create($each['time']);
                                             echo date_format($date,"H:i:s  d-m-Y ")

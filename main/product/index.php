@@ -97,11 +97,34 @@
             where id_product = '$id_product'";
             $result = mysqli_query($connect,$sql);
 
+            $sql = "select count(*) from rating
+                    where id_product = '$id_product'
+                    ";
+            $resultt = mysqli_query($connect,$sql);
+            $count = mysqli_fetch_array($resultt)['count(*)'];
 
+            $sql = "select sum(rating) from rating
+                    where id_product = '$id_product'
+                    ";
+            $resultt = mysqli_query($connect,$sql);
+            $sum = mysqli_fetch_array($resultt)['sum(rating)'];
+            $rate = $sum / $count;
             ?>
 
             <div class="review">
-
+                <span>
+                    Rate:
+                    <?php
+                    echo round($rate,1)
+                    ?>
+                    <i class="fa-solid fa-star"></i>
+                </span>
+                <p>
+                    <?php
+                    echo $count
+                    ?>
+                    lượt đánh giá
+                </p>
             </div>
 
             <div class="under">

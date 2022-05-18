@@ -21,21 +21,28 @@
                     <?php  }else{ ?>
                 <a style=" color :red;" href="http://localhost/----n-web-1/----n-web-1/sign_out.php">Đăng xuất</a>
                 |
-                <a href="http://localhost/----n-web-1/----n-web-1/main/customer/profile.php">
-                    <?php echo $_SESSION['name'] ?>
-                    <i class="ti-user profile_icon"></i>
-                </a>
-                <br>
-                    <?php if(empty($_SESSION['level'])){ ?>
-                    <a href="http://localhost/----n-web-1/----n-web-1/main/product/cart.php">
-                        Giỏ hàng
-                        <i class="ti-shopping-cart-full profile_icon"></i>
-                    </a>
-                    <?php }else{ ?>
+                   <?php if(empty($_SESSION['level'])){ ?>
+                        <a href="http://localhost/----n-web-1/----n-web-1/main/customer/profile.php">
+                            <?php echo $_SESSION['name'] ?>
+                            <i class="ti-user profile_icon"></i>
+                        </a>
+                        <br>
                         <a href="http://localhost/----n-web-1/----n-web-1/main/product/cart.php">
-                        Quản lý
-                        <i class="fa-solid fa-gear profile_icon"></i>
-                    </a>
+                            Giỏ hàng
+                            <i class="ti-shopping-cart-full profile_icon"></i>
+                        </a>
+                    <?php }else{ ?>
+                            <?php if($_SESSION['level'] == 1 ){ ?>
+                            <a href="http://localhost/----n-web-1/----n-web-1/main/manager/admin.php?profile">
+                                <?php echo $_SESSION['name'] ?>
+                                <i class="ti-user profile_icon"></i>
+                            </a>
+                             <?php }else{ ?>
+                               <a href="#">
+                                   <?php echo $_SESSION['name'] ?>
+                                   <i class="ti-user profile_icon"></i>
+                               </a>
+                            <?php } ?>
                     <?php } ?>
                 <?php } ?>
             </div>

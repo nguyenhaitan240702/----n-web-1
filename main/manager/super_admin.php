@@ -17,44 +17,43 @@
                 <a href="?">Doanh số</a>
             </div>
             <div class="category">
-                <a href="?statistical=1">Admin</a>
+                <a href="?statistical=1">Quản lý nhân viên</a>
             </div>
             <div class="category">
-                <a href="?statistical=2">Customers</a>
+                <a href="?statistical=2">Quản lý thông tin khách hàng</a>
             </div>
             <div class="category">
-                <a href="?statistical=3">Products</a>
+                <a href="?statistical=3">Quản lý sản phẩm</a>
             </div>
             <div class="category">
-                <a href="?statistical=4">Manufacturers</a>
+                <a href="?statistical=4">Quản lý thông tin nhà sản xuất</a>
             </div>
 
          </div>
     </div>
 
     <div class="bill_history">
-      <?php if (empty($_GET['statistical'])){
-          include('turnover.php');
-      } ?>
-        <?php if (isset($_GET['statistical'])){ ?>
+      <?php
+        $statistical = $_GET['statistical'] ?? '';
+        switch ($statistical) {
+            case '':
+                require 'view_super_admin/turnover.php';
+                break;
+            case '1':
+                require 'view_super_admin/employee_admin.php';
+                break;
+            case '2':
+                require 'view_super_admin/employee_customer.php';
+                break;
+            case '3':
+                require 'view_super_admin/employee_product.php';
+                break;
+            case '4':
+                require 'view_super_admin/employee_manufacturer.php';
+                break;
 
-            <?php if ($_GET['statistical'] == 1){ ?>
-
-            <?php } ?>
-
-            <?php if ($_GET['statistical'] == 2){ ?>
-
-            <?php } ?>
-
-            <?php if ($_GET['statistical'] == 3){ ?>
-
-            <?php } ?>
-            
-            <?php if ($_GET['statistical'] == 4 ){ ?>
-
-            <?php } ?>
-
-        <?php } ?>
+        }
+      ?>
     </div>
 </body>
 </html>
