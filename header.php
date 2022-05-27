@@ -33,7 +33,7 @@
                         </a>
                     <?php }else{ ?>
                             <?php if($_SESSION['level'] == 1 ){ ?>
-                            <a href="http://localhost/----n-web-1/----n-web-1/main/manager/admin.php?profile">
+                            <a href="http://localhost/----n-web-1/----n-web-1/main/manager/admin.php?statistical=profile">
                                 <?php echo $_SESSION['name'] ?>
                                 <i class="ti-user profile_icon"></i>
                             </a>

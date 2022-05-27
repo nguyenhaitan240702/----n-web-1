@@ -118,8 +118,8 @@
                   Giới tính
               </td>
               <td>
-                  <input type="radio" name="gender" checked>Nam
-                  <input type="radio" name="gender" >Nữ
+                  <input type="radio" name="gender" value="Nam" checked>Nam
+                  <input type="radio" name="gender" value="Nữ" >Nữ
               </td>
           </tr>
           <tr>
@@ -151,7 +151,7 @@
                   Mật khẩu
               </td>
               <td>
-                  <input type="password" name="password">
+                  <input type="password" name="password" value="<?php echo $profile['password']; ?>"">
               </td>
               
           </tr>                
@@ -238,7 +238,7 @@
                         <div class="bill_detail <?php echo $id_bill ?>">
                                 <table>
                                     <tr>
-                                        <td style="width:10% ;"><img height="80" width="60" style="border-radius: 8px" src="<?php echo $eachh['images'] ?>" alt="qq"></td>
+                                        <td style="width:10% ;"><img height="80" width="60" style="border-radius: 8px" src="../manager/images/<?php echo $eachh['images'] ?>" alt="qq"></td>
                                         <td style="width: 50%;"><p style="font-size: 1.2em;top: 0"> <?php echo $eachh['name'] ?></p></td>
                                         <td style="width:20% ;">Số lượng: <span style="font-style: 1.2em; color:red"><?php echo $eachh['quantity'] ?></span></td>
                                         <td style="width: 20%;"><?php echo number_format(  $price * $eachh['quantity']  , 0, '', ',') ?> đ</td>
@@ -325,7 +325,7 @@
                                         <div class="bill_detail-ship <?php echo $id_bill ?>">
                                                 <table>
                                                     <tr>
-                                                        <td style="width:10% ;"><img height="80" width="60" style="border-radius: 8px" src="<?php echo $eachh['images'] ?>" alt="qq"></td>
+                                                        <td style="width:10% ;"><img height="80" width="60" style="border-radius: 8px" src="../manager/images/<?php echo $eachh['images'] ?>" alt="qq"></td>
                                                         <td style="width: 50%;"><p style="font-size: 1.2em;top: 0"> <?php echo $eachh['name'] ?></p></td>
                                                         <td style="width:20% ;">Số lượng: <span style="font-style: 1.2em; color:red"><?php echo $eachh['quantity'] ?></span></td>
                                                         <td style="width: 20%;"><?php echo number_format(  $price * $eachh['quantity']  , 0, '', ',') ?> đ</td>
@@ -412,7 +412,7 @@
                                         <div class="bill_detail-ok <?php echo $id_bill ?>">
                                                 <table>
                                                     <tr>
-                                                        <td style="width:10% ;"><img height="80" width="60" style="border-radius: 8px" src="<?php echo $eachh['images'] ?>" alt="qq"></td>
+                                                        <td style="width:10% ;"><img height="80" width="60" style="border-radius: 8px" src="../manager/images/<?php echo $eachh['images'] ?>" alt="qq"></td>
                                                         <td style="width: 50%;"><p style="font-size: 1.2em;top: 0"> <?php echo $eachh['name'] ?></p></td>
                                                         <td style="width:20% ;">Số lượng: <span style="font-style: 1.2em; color:red"><?php echo $eachh['quantity'] ?></span></td>
                                                         <td style="width: 20%;"><?php echo number_format(  $price * $eachh['quantity']  , 0, '', ',') ?> đ</td>
@@ -499,7 +499,7 @@
                                         <div class="bill_detail-ko <?php echo $id_bill ?>">
                                                 <table>
                                                     <tr>
-                                                        <td style="width:10% ;"><img height="80" width="60" style="border-radius: 8px" src="<?php echo $eachh['images'] ?>" alt="qq"></td>
+                                                        <td style="width:10% ;"><img height="80" width="60" style="border-radius: 8px" src="../manager/images/<?php echo $eachh['images'] ?>" alt="qq"></td>
                                                         <td style="width: 50%;"><p style="font-size: 1.2em;top: 0"> <?php echo $eachh['name'] ?></p></td>
                                                         <td style="width:20% ;">Số lượng: <span style="font-style: 1.2em; color:red"><?php echo $eachh['quantity'] ?></span></td>
                                                         <td style="width: 20%;"><?php echo number_format(  $price * $eachh['quantity']  , 0, '', ',') ?> đ</td>

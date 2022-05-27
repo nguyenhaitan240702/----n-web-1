@@ -116,7 +116,7 @@ $('#container-3').ready(function () {
            align: 'right'
           }
           },
-          series: arrZZ,arrAA
+          series: arrZZ
           }
           });
   }

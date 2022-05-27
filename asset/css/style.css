@@ -501,12 +501,10 @@ button{
     background: radial-gradient(circle at 50% 120%, #faea0c, #e8ff15 10%, #d4df07a5 80%, #e0d7548d 100%);
     box-shadow: 10px 15px 15px rgba(30, 13, 13, 0.211);
     bottom: 0px;
-}
-.ball:hover{
     animation-name: change_color;
     animation-duration: 8s;
-  animation-delay: -2s;
-  animation-iteration-count: infinite;
+    animation-delay: -2s;
+    animation-iteration-count: infinite;
 }
 .ball:active{
     height: 180px;

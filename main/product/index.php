@@ -55,7 +55,7 @@
         </div>
         <div class="box_product">
            <div class="img_product" >
-                <img style="height: 500px; width: 400px" src="<?php echo $print['images'] ?>" alt="chắc ảnh lỗi rồi không sao cứ mua đi">
+                <img style="height: 500px; width: 400px" src="../manager/images/<?php echo $print['images'] ?>" alt="chắc ảnh lỗi rồi không sao cứ mua đi">
                 <?php if($print['id_status'] == 1){ ?>
             <p class="price-product-index" style="font-size: 2.5em;">Giá: <?php  echo number_format( $print['price'] , 0, '', ',') ?> đ</p>
             <?php } ?>

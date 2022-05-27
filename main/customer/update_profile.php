@@ -22,4 +22,4 @@ $sql = " update customer
         ";
 $result = mysqli_query($connect,$sql);
 
-header('location:main/customer/profile.php');
+header('location:profile.php');

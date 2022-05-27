@@ -36,11 +36,21 @@
    where
    name like '%$search%'";
    $mang_product = mysqli_query($connect,$sql_product);
-   $value_product = mysqli_fetch_array($mang_product);
-    $product = $value_product['count(*)'];
+    $product = mysqli_fetch_array($mang_product)['count(*)'];
+
+   $sql_product = "select count(*)from products
+   where
+   id_category like '%$id_category%'";
+   $mang_product_de = mysqli_query($connect,$sql_product);
+    $product_de = mysqli_fetch_array($mang_product_de)['count(*)'];
 
     $product_on_page = 30 ;
-    $so_page = ceil($product / $product_on_page);
+    if(empty($id_category)){
+        $so_page = ceil($product / $product_on_page);
+    }else{
+        $so_page = ceil($product_de / $product_on_page);
+    }
+
     $skip = $product_on_page * ($page - 1);
 
    $sql = "select * from products
@@ -49,6 +59,7 @@
    limit $product_on_page offset $skip" ;
    
    $result = mysqli_query($connect,$sql);
+   $eachh = mysqli_fetch_array($result);
        
 
      
@@ -69,12 +80,17 @@
 
 </div>
  <div class="box_3">
-
+     <?php if($eachh == null){ ?>
+         <div class="null">
+             <h2>Rất tiếc! </h2>
+             <h2>Không có sản phẩm này! </h2>
+         </div>
+     <?php } ?>
         <?php foreach($result as $eachh){ ?>
      <div class="product">
          <a href="http://localhost/----n-web-1/----n-web-1/main/product/index.php?id=<?php echo $eachh['id'] ?>">
              
-            <img  src="<?php echo $eachh['images'] ?>" alt="chắc ảnh lỗi rồi không sao cứ mua đi" class="img_product">
+            <img  src="main/manager/images/<?php echo $eachh['images'] ?>" alt="chắc ảnh lỗi rồi không sao cứ mua đi" class="img_product">
             <h2><?php echo $eachh['name'] ?></h2>
             <?php if($eachh['id_status'] == 1){ ?>
             <p>Giá: <?php  echo number_format( $eachh['price'] , 0, '', ',') ?> đ</p>
@@ -95,49 +111,64 @@
          </a>
      </div>
 
-            <?php } 
-            if(empty($_GET['id_category'])){ ?>
-            <div class="page">
-                 <?php if($page < $so_page -4){ ?>
-<?php if($page > 2){ ?>
-    <a href="?page=1&search=<?php echo $search ?>">
-    <?php echo 1 ?>
-        </a>
-    <span>...</span>
-<?php } ?>
- <?php for($i = $page ; $i <= $page + 4 ; $i++){?> 
-    
-    <a href="?page=<?php echo $i ?>&search=<?php echo $search ?>">
-    <?php echo $i ?>
-        </a>
-      
-      
-        <?php } ?>
-   
-        <span>...</span>
-        <a href="?page= <?php echo $so_page ?>&search=<?php echo $search ?>">
-        <?php echo $so_page ?>
-        </a>
-    <?php }else{ ?>
-        <?php if($page > 2){ ?>
-
-    <a href="?page=1&search=<?php echo $search ?>">
-    <?php echo 1 ?>
-        </a>
-    <span>...</span>
-<?php } ?>
- <?php for($i = $so_page - 4 ; $i <= $so_page ; $i++){?> 
-    
-    <a href="?page=<?php echo $i ?>&search=<?php echo $search ?>">
-    <?php echo $i ?>
-        </a>
-
-
-        <?php } ?>
-
-    <?php } ?>
-            </div>
             <?php } ?>
+
+            <div class="page">
+     <?php
+     if($so_page > 4){
+        if($page < $so_page -4){
+     ?>
+
+            <?php if($page > 2){ ?>
+                <a href="?page=1&search=<?php echo $search ?>&id_category=<?php echo $id_category?>">
+                <?php echo 1 ?>
+                    </a>
+                <span>...</span>
+            <?php } ?>
+            <?php if($page == 2){ ?>
+                <a href="?page=1&search=<?php echo $search ?>&id_category=<?php echo $id_category?>">
+                    <?php echo 1 ?>
+                </a>
+            <?php } ?>
+
+            <?php for($i = $page ; $i <= $page + 4 ; $i++){?>
+
+            <a href="?page=<?php echo $i ?>&search=<?php echo $search ?>&id_category=<?php echo $id_category?>">
+            <?php echo $i ?>
+                </a>
+                <?php } ?>
+                <span>...</span>
+                <a href="?page= <?php echo $so_page ?>&search=<?php echo $search ?>&id_category=<?php echo $id_category?>">
+                <?php echo $so_page ?>
+                </a>
+            <?php }else{ ?>
+                <?php if($page > 2){ ?>
+
+                <a href="?page=1&search=<?php echo $search ?>&id_category=<?php echo $id_category?>">
+                <?php echo 1 ?>
+                    </a>
+                <span>...</span>
+                <?php } ?>
+
+            <?php for($i = $so_page - 4 ; $i <= $so_page ; $i++){?>
+
+                <a href="?page=<?php echo $i ?>&search=<?php echo $search ?>&id_category=<?php echo $id_category?>">
+                <?php echo $i ?>
+                </a>
+
+
+            <?php }
+        }
+     }else{ ?>
+         <?php for($i = 1 ; $i <= $so_page ; $i++){?>
+
+             <a href="?page=<?php echo $i ?>&search=<?php echo $search ?>&id_category=<?php echo $id_category?>">
+                 <?php echo $i ?>
+             </a>
+         <?php } ?>
+     <?php } ?>
+            </div>
+
            
  </div>
  

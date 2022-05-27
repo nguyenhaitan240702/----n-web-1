@@ -1,4 +1,5 @@
 <?php
+$name = $_POST['name'];
 $number_phone = $_POST['number_phone'];
 $adress = $_POST['adress'];
 $notes = $_POST['notes'];
@@ -15,8 +16,8 @@ $id_status = 1;
 foreach($cart as $each){
     $total_price += $each['quantity'] * $each['price'];
 }
-$sql = "insert into bill( id_customer, adress, number_phone, notes, id_status, total_price)
-values('$id_customer', '$adress', '$number_phone', '$notes', '$id_status', '$total_price')";
+$sql = "insert into bill( id_customer,name, adress, number_phone, notes, id_status, total_price)
+values('$id_customer','$name', '$adress', '$number_phone', '$notes', '$id_status', '$total_price')";
 mysqli_query($connect,$sql);
 
 
