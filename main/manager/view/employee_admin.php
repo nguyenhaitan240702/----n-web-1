@@ -1,7 +1,12 @@
 
 <?php
+
+use Cassandra\Date;
+
 $connect = mysqli_connect('localhost','root','0000','project_web_1',3306);
 mysqli_set_charset($connect,'utf8');
+$today = (float) date('d');
+$time= $today - 1;
 $sql = "SELECT
  admin.id,
  admin.name,
@@ -12,9 +17,9 @@ $sql = "SELECT
  admin.number_phone,
  admin.password,
  SUM(if(DATE(time) = CURDATE(), 1, 0)) as 'today',
- SUM(if(DATE(time) >= CURDATE() - INTERVAL 30 DAY, 1, 0)) as '30_days',
+ SUM(if(DATE(time) >= CURDATE() - INTERVAL '$time' DAY, 1, 0)) as '30_days',
  count(*) as tong
- from admin
+ from admin 
  LEFT join bill
  on (
      admin.id = bill.id_admin
@@ -71,7 +76,7 @@ $result = mysqli_query($connect, $sql);
             <th>
                 <?php
                 $a = $each['30_days'];
-                if($a < "1350"){
+                if($a < "1050"){
                     echo "Chưa đạt";
                 } else{
                     echo "Đạt";
@@ -83,9 +88,9 @@ $result = mysqli_query($connect, $sql);
    <tr>
     <th  colspan="6">
         <h4>
-            KPI / Tháng > 1350 đơn : Đạt
+            KPI / Tháng > 1050 đơn : Đạt
             <br>
-            KPI / Tháng < 1350 đơn : Chưa đạt
+            KPI / Tháng < 1050 đơn : Chưa đạt
         </h4>
     </th>
 

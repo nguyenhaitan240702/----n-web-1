@@ -21,7 +21,7 @@ $sql = "select * from manufacturers";
 $manufacturers = mysqli_query($connect, $sql);
 ?>
 
-<form action="process_update.php" method="post" enctype="multipart/form-data">
+<form action="?statistical=product_update"> method="post" enctype="multipart/form-data">
     <br>
     Thêm sản phẩm
     <br>

@@ -43,7 +43,7 @@
                   
                    
                 <tr>
-                    <td><img height="200" width="180" src="images/<?php echo $each['images'] ?>" alt="qq"></td>
+                    <td><img height="200" width="180" src="../manager/images/<?php echo $each['images'] ?>" alt="qq"></td>
                     <td><p style="font-size: 2em;top: 0"> <?php echo $each['name'] ?></p></td>
                     <td><?php if(empty($_SESSION['cart'][$id]['price_sale']) ){ ?>
             <p> <?php  echo number_format( $each['price'] , 0, '', ',') ?> đ</p>
@@ -131,7 +131,7 @@
                             </tr>
 
                             <tr>
-                                <td>tên người nhận</td>
+                                <td>Tên người nhận</td>
                                 <td>
                                     <input type="text" name="name" size="30" value="<?php echo $each['name'] ?>">
                                 </td>

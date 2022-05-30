@@ -22,7 +22,7 @@ values(' $name','$description','$file_name','$price','1' ,'$id_manufacturers','$
 mysqli_query($connect, $sql);
 mysqli_close($connect);
 if($_SESSION['level'] == 1){
-    header('location:admin.php?statistical=1');
+    header('location:admin.php?statistical=1&success=');
 }
 if($_SESSION['level'] == 2){
     header('location:super_admin.php?statistical=3');

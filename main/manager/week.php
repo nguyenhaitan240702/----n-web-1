@@ -60,15 +60,19 @@ for( $i = $staticstart; $i <= $staticfinish; $i ++){
   
   $arrr[$key] = 0;
 }
+
 }else{
  if( $month_of_monday == $this_month){
       
-      for( $i = $staticstart; $i <= $staticfinish; $i ++){
+      for( $i = $staticstart; $i <= $day_of_this_month; $i ++){
           $key = $i . '-' . $this_month . '-' . $this_year;
-          
           $arrr[$key] = 0;
-
           }
+      for( $i = 1 ; $i <= $staticfinish; $i ++){
+          $key = $i . '-' . $next_month . '-' . $this_year;
+          $arrr[$key] = 0;
+      }
+
 }else{
   for( $i = $staticstart; $i <=$day_of_last_month; $i ++){
       $key = $i . '-' . $last_month . '-' . $this_year;

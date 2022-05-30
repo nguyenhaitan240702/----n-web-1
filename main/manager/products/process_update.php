@@ -33,4 +33,9 @@ $sql = "update products
 mysqli_query($connect, $sql);
 mysqli_close($connect);
 
-header('location:admin.php?statistical=1');
+if($_SESSION['level'] == 1){
+    header('location:admin.php?statistical=2');
+}
+if($_SESSION['level'] == 2){
+    header('location:super_admin.php?statistical=3');
+}

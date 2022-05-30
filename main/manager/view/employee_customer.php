@@ -12,11 +12,13 @@ customer.email,
     SELECT count(*) 
     from bill
     where id_customer = customer.id
+    and id_status = 3
 ) as total_bill,
 (
     SELECT sum(total_price) 
     from bill
     where id_customer = customer.id
+    and id_status = 3
 ) as total_price
 FROM customer 
 group by customer.id
@@ -44,7 +46,7 @@ $result = mysqli_query($connect, $sql);
             Email
         </th>
         <th>
-            Đã đặt
+            Đã mua thành công
         </th>
         <th>
             Đã tiêu
@@ -71,7 +73,7 @@ $result = mysqli_query($connect, $sql);
                 <?php echo $each['total_bill'] ?> đơn
             </th>
             <th>
-                <?php echo  number_format(  $each['total_price']* 0.5 , 0, '', ',') ?> đ
+                <?php echo  number_format(  $each['total_price']  , 0, '', ',') ?> đ
             </th>
         </tr>
     <?php endforeach  ?>

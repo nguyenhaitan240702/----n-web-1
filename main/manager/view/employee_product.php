@@ -1,9 +1,11 @@
 
 <?php
 //include '../menu.php';
+
 $connect = mysqli_connect('localhost','root','0000','project_web_1',3306);
 mysqli_set_charset($connect,'utf8');
 //  $sql = "select * from manufacturers";
+
 $sql = "select  products.*,
                 manufacturers.name as name_manufacturers,
                 status_product.name as name_status_product,
@@ -16,9 +18,9 @@ $sql = "select  products.*,
                     WHERE
                         bill_detail.id_product = products.id AND bill.id_status = 3
                 ) AS quantity_sales
-        from products
+        from products 
         join manufacturers on manufacturers.id = products.id_manufacture
-        join status_product on status_product.id = products.id_status
+        join status_product on status_product.id = products.id_status 
         ORDER BY
         quantity_sales
         DESC

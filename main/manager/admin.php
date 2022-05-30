@@ -71,6 +71,9 @@
             case 'store_product':
                 require 'products/process_insert.php';
                 break;
+            case 'product_update':
+                require 'products/process_update.php';
+                break;
             case 'update_product':
                 require 'products/form_update.php';
                 break;
